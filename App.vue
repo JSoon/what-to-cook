@@ -22,6 +22,7 @@
 <style lang="scss">
 	/*每个页面公共css */
 	@import '@/uni_modules/uni-scss/index.scss';
+  
 	/* #ifndef APP-NVUE */
 	@import '@/static/customicons.css';
 	// 设置整个项目的背景色
@@ -32,14 +33,27 @@
 	}
 	/* #endif */
   
+  page, uni-page-body, html, body, #app {
+    height: 100%;
+  }
+  
+  @supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+    body {
+      padding-bottom: constant(safe-area-inset-bottom);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+  
   .footer {
-    padding: 20rpx 0;
     .copyright {
       display: flex;
       justify-content: center;
+      align-items: center;
+      padding: 10rpx 0;
       font-size: 24rpx;
       color: #aaa;
     }
+    
     .email {
       margin-left: 10rpx;
     }

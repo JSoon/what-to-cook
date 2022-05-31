@@ -69,10 +69,6 @@
 </script>
 
 <style lang="less" scoped>
-  page {
-    height: 100%;
-  }
-  
   .container {
     display: flex;
     flex-direction: column;
@@ -112,7 +108,6 @@
     margin: 30rpx;
     
     .input-box {
-      
       input {
         display: block;
         height: 80rpx;

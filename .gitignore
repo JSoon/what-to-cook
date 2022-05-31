@@ -6,9 +6,12 @@
 /yarn-error.log
 
 # production
+/unpackage
 /dist
 dist*.zip
 
 # misc
 .DS_Store
 .vite
+androidPrivacy.json
+.hbuilderx
