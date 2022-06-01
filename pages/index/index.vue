@@ -70,9 +70,14 @@
 
 <style lang="less" scoped>
   .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: constant(safe-area-inset-bottom);
+    bottom: env(safe-area-inset-bottom);
+    left: 0;
     display: flex;
     flex-direction: column;
-    height: 100%;
     line-height: 1.8;
   }
     
@@ -105,7 +110,9 @@
   .form-box {
     flex: 1;
     position: relative;
-    margin: 30rpx;
+    display: flex;
+    flex-direction: column;
+    padding: 30rpx;
     
     .input-box {
       input {
@@ -122,6 +129,7 @@
     }
   
     .menu-box {
+      flex: 1;
       margin: 30rpx 0;
       text-align: center;
       font-size: 50rpx;
@@ -129,11 +137,6 @@
     }
     
     .submit-box {
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      
       button {
         background-color: #a4adba;
         border: 1rpx solid #9aa3af;

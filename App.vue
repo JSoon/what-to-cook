@@ -33,10 +33,6 @@
 	}
 	/* #endif */
   
-  page, uni-page-body, html, body, #app {
-    height: 100%;
-  }
-  
   @supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
     body {
       padding-bottom: constant(safe-area-inset-bottom);
